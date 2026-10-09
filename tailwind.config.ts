@@ -11,6 +11,11 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        gold: "#B45309",
+        cream: "#FFFBEB",
+      },
+      fontFamily: {
+        display: ["var(--font-display)", "Georgia", "serif"],
       },
     },
   },

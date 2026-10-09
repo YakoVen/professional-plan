@@ -50,7 +50,7 @@ export default function OrdersPage() {
         </p>
         <Link
           href="/articles"
-          className="inline-flex items-center px-6 py-3 text-base font-medium rounded-xl text-white bg-indigo-600 hover:bg-indigo-700 transition-colors"
+          className="inline-flex items-center px-6 py-3 text-base font-medium rounded-xl text-white bg-amber-700 hover:bg-amber-800 transition-colors"
         >
           Découvrir la boutique
         </Link>
@@ -64,7 +64,7 @@ export default function OrdersPage() {
 
       <div className="space-y-4">
         {orders.map((order) => (
-          <div key={order.id} className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:border-indigo-200 transition-colors">
+          <div key={order.id} className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:border-amber-200 transition-colors">
             <div className="p-6 border-b border-gray-50 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
               <div>
                 <div className="flex items-center space-x-3 mb-1">
@@ -106,7 +106,7 @@ export default function OrdersPage() {
 
               <Link
                 href={`/account/orders/${order.id}`}
-                className="inline-flex items-center text-sm font-medium text-indigo-600 hover:text-indigo-500 bg-white px-4 py-2 border border-gray-200 rounded-lg shadow-sm"
+                className="inline-flex items-center text-sm font-medium text-amber-700 hover:text-amber-500 bg-white px-4 py-2 border border-gray-200 rounded-lg shadow-sm"
               >
                 Détails
                 <ChevronRight className="ml-1 h-4 w-4" />

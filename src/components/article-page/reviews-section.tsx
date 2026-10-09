@@ -102,7 +102,7 @@ export default function ReviewsSection({ articleId }: { articleId: string }) {
         <textarea value={text} onChange={(e) => setText(e.target.value)} rows={3}
           placeholder="Votre avis..." className="w-full border rounded-xl px-3 py-2" required />
         <button type="submit" disabled={sending}
-          className="bg-indigo-600 text-white px-6 py-2.5 rounded-xl font-bold hover:bg-indigo-700 disabled:opacity-50">
+          className="bg-amber-700 text-white px-6 py-2.5 rounded-xl font-bold hover:bg-amber-800 disabled:opacity-50">
           {sending ? 'Envoi...' : 'Publier mon avis'}
         </button>
       </form>

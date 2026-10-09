@@ -83,7 +83,7 @@ export default function ReturnsAdminPage() {
       <div className="flex gap-2 flex-wrap">
         {(['all', 'requested', 'approved', 'rejected', 'completed'] as const).map((s) => (
           <button key={s} onClick={() => setFilter(s)}
-            className={`px-4 py-2 rounded-xl text-sm font-medium ${filter === s ? 'bg-indigo-600 text-white' : 'bg-white border hover:bg-gray-50'}`}>
+            className={`px-4 py-2 rounded-xl text-sm font-medium ${filter === s ? 'bg-amber-700 text-white' : 'bg-white border hover:bg-gray-50'}`}>
             {s === 'all' ? 'Tous' : statusLabels[s]}
           </button>
         ))}
@@ -113,7 +113,7 @@ export default function ReturnsAdminPage() {
                 )}
                 {r.status === 'approved' && (
                   <button onClick={() => complete(r.id, r.orderId)} disabled={acting === r.id}
-                    className="flex items-center gap-1 px-3 py-2 bg-indigo-600 text-white rounded-xl text-sm font-medium hover:bg-indigo-700 disabled:opacity-50">
+                    className="flex items-center gap-1 px-3 py-2 bg-amber-700 text-white rounded-xl text-sm font-medium hover:bg-amber-800 disabled:opacity-50">
                     <PackageCheck size={16} /> Terminer + restocker
                   </button>
                 )}

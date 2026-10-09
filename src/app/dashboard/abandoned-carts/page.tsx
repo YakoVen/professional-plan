@@ -152,7 +152,7 @@ export default function AbandonedCartsPage() {
                     <div className="font-medium">{cart.customerName || 'Client anonyme'}</div>
                     <div className="text-gray-500 text-xs">{cart.abandonedAt ? cart.abandonedAt.slice(0, 16).replace('T', ' ') : ''}</div>
                     {(cart.recoverySmsSentAt || cart.recoveryEmailSentAt) && (
-                      <div className="text-xs text-indigo-600">Relancé{cart.recoverySmsSentAt ? ' SMS' : ''}{cart.recoveryEmailSentAt ? ' + email' : ''}</div>
+                      <div className="text-xs text-amber-700">Relancé{cart.recoverySmsSentAt ? ' SMS' : ''}{cart.recoveryEmailSentAt ? ' + email' : ''}</div>
                     )}
                   </td>
                   <td className="p-4 text-gray-600">{cart.customerPhone || cart.customerEmail || '—'}</td>
@@ -172,13 +172,13 @@ export default function AbandonedCartsPage() {
                       <div className="flex gap-2 justify-end">
                         {cart.customerPhone && (
                           <button onClick={() => handleNudge(cart.id, 'sms')} disabled={sending === cart.id + 'sms'}
-                            className="px-3 py-1.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded-lg text-xs font-medium inline-flex items-center gap-1 disabled:opacity-50">
+                            className="px-3 py-1.5 bg-amber-50 text-amber-700 hover:bg-amber-100 rounded-lg text-xs font-medium inline-flex items-center gap-1 disabled:opacity-50">
                             <Phone size={14} /> SMS
                           </button>
                         )}
                         {cart.customerEmail && (
                           <button onClick={() => handleNudge(cart.id, 'email')} disabled={sending === cart.id + 'email'}
-                            className="px-3 py-1.5 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded-lg text-xs font-medium inline-flex items-center gap-1 disabled:opacity-50">
+                            className="px-3 py-1.5 bg-amber-50 text-amber-700 hover:bg-amber-100 rounded-lg text-xs font-medium inline-flex items-center gap-1 disabled:opacity-50">
                             <Mail size={14} /> Email
                           </button>
                         )}

@@ -76,7 +76,7 @@ export default function OrderDetailPage() {
     return (
       <div className="bg-white rounded-xl border p-12 text-center">
         <p className="text-gray-500 mb-4">Commande introuvable.</p>
-        <Link href="/account/orders" className="text-indigo-600 font-medium hover:underline">Retour aux commandes</Link>
+        <Link href="/account/orders" className="text-amber-700 font-medium hover:underline">Retour aux commandes</Link>
       </div>
     );
   }
@@ -104,14 +104,14 @@ export default function OrderDetailPage() {
         <h2 className="text-lg font-bold text-gray-900 mb-6">Suivi de commande</h2>
         <div className="relative">
           <div className="absolute top-4 left-6 right-6 h-0.5 bg-gray-200" />
-          <div className="absolute top-4 left-6 h-0.5 bg-indigo-600 transition-all"
+          <div className="absolute top-4 left-6 h-0.5 bg-amber-700 transition-all"
             style={{ width: `calc(${(order.state / (stateLabels.length - 1)) * 100}% - 3rem)` }} />
 
           <div className="relative flex justify-between">
             {timeline.map((step, idx) => (
               <div key={idx} className="flex flex-col items-center">
                 <div className={`h-8 w-8 rounded-full flex items-center justify-center relative z-10 ${
-                  step.completed ? 'bg-indigo-600 text-white' : 'bg-gray-200 text-gray-400'
+                  step.completed ? 'bg-amber-700 text-white' : 'bg-gray-200 text-gray-400'
                 }`}>
                   {step.completed ? <CheckCircle2 className="h-5 w-5" /> : <Clock className="h-5 w-5" />}
                 </div>
@@ -139,7 +139,7 @@ export default function OrderDetailPage() {
                 placeholder="Motif du retour..." className="w-full border rounded-xl px-3 py-2 text-sm" required />
               <div className="flex gap-2">
                 <button type="submit" disabled={returning}
-                  className="bg-indigo-600 text-white px-4 py-2 rounded-xl text-sm font-bold hover:bg-indigo-700 disabled:opacity-50">
+                  className="bg-amber-700 text-white px-4 py-2 rounded-xl text-sm font-bold hover:bg-amber-800 disabled:opacity-50">
                   {returning ? 'Envoi...' : 'Envoyer la demande'}
                 </button>
                 <button type="button" onClick={() => setShowReturnForm(false)}
@@ -148,7 +148,7 @@ export default function OrderDetailPage() {
             </form>
           ) : (
             <button onClick={() => setShowReturnForm(true)}
-              className="flex items-center gap-2 text-sm font-medium text-indigo-600 hover:underline">
+              className="flex items-center gap-2 text-sm font-medium text-amber-700 hover:underline">
               <RotateCcw size={16} /> Demander un retour
             </button>
           )
@@ -217,7 +217,7 @@ export default function OrderDetailPage() {
           {/* Shipping Address */}
           <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
             <div className="flex items-center space-x-2 mb-4">
-              <MapPin className="h-5 w-5 text-indigo-600" />
+              <MapPin className="h-5 w-5 text-amber-700" />
               <h2 className="text-lg font-bold text-gray-900">Adresse de livraison</h2>
             </div>
             <address className="not-italic text-sm text-gray-600 space-y-1">

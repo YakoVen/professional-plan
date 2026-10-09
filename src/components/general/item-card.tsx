@@ -97,11 +97,11 @@ export default function ItemCard({ article }: ItemCardProps) {
         {/* Content */}
         <div className="p-4 flex flex-col flex-grow">
           {article.hasVariants && (
-            <span className="text-xs font-medium text-indigo-600 mb-1 inline-block">
+            <span className="text-xs font-medium text-amber-700 mb-1 inline-block">
               Plusieurs options
             </span>
           )}
-          <h3 className="font-semibold text-gray-900 line-clamp-2 mb-2 group-hover:text-indigo-600 transition-colors">
+          <h3 className="font-semibold text-gray-900 line-clamp-2 mb-2 group-hover:text-amber-700 transition-colors">
             {article.title}
           </h3>
           
@@ -123,7 +123,7 @@ export default function ItemCard({ article }: ItemCardProps) {
               className={`p-2.5 rounded-xl shadow-sm transition-all ${
                 stock === 0 
                   ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
-                  : 'bg-indigo-50 text-indigo-600 hover:bg-indigo-600 hover:text-white'
+                  : 'bg-amber-50 text-amber-700 hover:bg-amber-700 hover:text-white'
               }`}
             >
               <ShoppingBag size={20} />

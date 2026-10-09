@@ -94,8 +94,8 @@ export default function AccountOverviewPage() {
               href={stat.href}
               className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 flex flex-col items-center text-center hover:border-indigo-300 hover:shadow-md transition-all group"
             >
-              <div className="h-12 w-12 bg-indigo-50 rounded-full flex items-center justify-center mb-4 group-hover:bg-indigo-100 transition-colors">
-                <Icon className="h-6 w-6 text-indigo-600" />
+              <div className="h-12 w-12 bg-amber-50 rounded-full flex items-center justify-center mb-4 group-hover:bg-amber-100 transition-colors">
+                <Icon className="h-6 w-6 text-amber-700" />
               </div>
               <p className="text-sm font-medium text-gray-500 mb-1">{stat.name}</p>
               <p className="text-2xl font-bold text-gray-900">{stat.value}</p>
@@ -107,7 +107,7 @@ export default function AccountOverviewPage() {
       <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
         <div className="p-6 border-b border-gray-100 flex items-center justify-between">
           <h2 className="text-lg font-bold text-gray-900">Commandes Récentes</h2>
-          <Link href="/account/orders" className="text-sm font-medium text-indigo-600 hover:text-indigo-500 flex items-center">
+          <Link href="/account/orders" className="text-sm font-medium text-amber-700 hover:text-amber-500 flex items-center">
             Voir tout
             <ArrowRight className="ml-1 h-4 w-4" />
           </Link>

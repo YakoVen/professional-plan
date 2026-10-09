@@ -85,7 +85,7 @@ export default function BundlesPage() {
         <div className="bg-white rounded-2xl border p-12 text-center">
           <Package className="w-12 h-12 text-gray-300 mx-auto mb-4" />
           <p className="text-gray-500">Aucun lot disponible pour le moment.</p>
-          <Link href="/articles" className="text-indigo-600 font-medium hover:underline">Voir la boutique</Link>
+          <Link href="/articles" className="text-amber-700 font-medium hover:underline">Voir la boutique</Link>
         </div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -114,10 +114,10 @@ export default function BundlesPage() {
                   <div className="flex items-center justify-between pt-4 border-t">
                     <div>
                       {sum > b.bundlePrice && <span className="text-sm text-gray-400 line-through block">{sum.toLocaleString()} DA</span>}
-                      <span className="text-2xl font-bold text-indigo-600">{b.bundlePrice.toLocaleString()} DA</span>
+                      <span className="text-2xl font-bold text-amber-700">{b.bundlePrice.toLocaleString()} DA</span>
                     </div>
                     <button onClick={() => handleAdd(b)} disabled={!inStock}
-                      className="flex items-center gap-2 bg-indigo-600 text-white px-5 py-3 rounded-xl font-bold hover:bg-indigo-700 disabled:opacity-50">
+                      className="flex items-center gap-2 bg-amber-700 text-white px-5 py-3 rounded-xl font-bold hover:bg-amber-800 disabled:opacity-50">
                       <ShoppingCart size={18} /> {inStock ? 'Ajouter le lot' : 'Rupture'}
                     </button>
                   </div>

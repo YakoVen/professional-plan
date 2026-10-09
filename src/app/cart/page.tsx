@@ -19,7 +19,7 @@ export default function CartPage() {
         <p className="text-gray-500 max-w-md mx-auto">
           Découvrez nos produits et trouvez ce qui vous correspond le mieux.
         </p>
-        <Link href="/articles" className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-xl font-medium hover:bg-indigo-700 transition">
+        <Link href="/articles" className="inline-block bg-amber-700 text-white px-8 py-3 rounded-xl font-medium hover:bg-amber-800 transition">
           Retour à la boutique
         </Link>
       </div>
@@ -52,7 +52,7 @@ export default function CartPage() {
                   </button>
                 </div>
                 <div className="flex justify-between items-end">
-                  <span className="font-bold text-indigo-600">{fmt(item.price * item.quantity)}</span>
+                  <span className="font-bold text-amber-700">{fmt(item.price * item.quantity)}</span>
                   <div className="flex items-center bg-gray-100 rounded-xl">
                     <button onClick={() => updateQuantity(item.articleId, item.quantity - 1, item.variantId)} className="p-2 hover:bg-gray-200 rounded-l-xl">
                       <Minus className="w-4 h-4" />
@@ -85,7 +85,7 @@ export default function CartPage() {
                 <span>{fmt(subtotal)}</span>
               </div>
             </div>
-            <Link href="/checkout" className="w-full bg-indigo-600 text-white py-3 rounded-xl font-medium flex justify-center hover:bg-indigo-700 transition">
+            <Link href="/checkout" className="w-full bg-amber-700 text-white py-3 rounded-xl font-medium flex justify-center hover:bg-amber-800 transition">
               Passer la commande
             </Link>
           </div>

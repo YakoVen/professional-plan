@@ -67,7 +67,7 @@ export default function TeamPage() {
       <div className="flex gap-2">
         {(['all', 'staff', 'customers'] as const).map((f) => (
           <button key={f} onClick={() => setFilter(f)}
-            className={`px-4 py-2 rounded-xl text-sm font-medium ${filter === f ? 'bg-indigo-600 text-white' : 'bg-white border hover:bg-gray-50'}`}>
+            className={`px-4 py-2 rounded-xl text-sm font-medium ${filter === f ? 'bg-amber-700 text-white' : 'bg-white border hover:bg-gray-50'}`}>
             {f === 'all' ? 'Tous' : f === 'staff' ? 'Équipe' : 'Clients'}
           </button>
         ))}
@@ -91,7 +91,7 @@ export default function TeamPage() {
                     <p className="text-xs text-gray-500">{u.email}</p>
                   </td>
                   <td className="px-4 py-3">
-                    <span className={`inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-medium ${isStaff(u.role) ? 'bg-indigo-100 text-indigo-700' : 'bg-gray-100 text-gray-600'}`}>
+                    <span className={`inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-medium ${isStaff(u.role) ? 'bg-amber-100 text-amber-800' : 'bg-gray-100 text-gray-600'}`}>
                       <ShieldCheck size={12} /> {ROLE_LABELS[u.role] || u.role}
                     </span>
                   </td>

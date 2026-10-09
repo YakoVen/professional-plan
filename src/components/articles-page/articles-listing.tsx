@@ -67,7 +67,7 @@ export default function ArticlesListing({ initialArticles }: { initialArticles: 
                 placeholder="Rechercher des produits..."
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-600"
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-700"
               />
             </div>
 
@@ -79,7 +79,7 @@ export default function ArticlesListing({ initialArticles }: { initialArticles: 
                 <SlidersHorizontal className="w-5 h-5" />
                 Filtres
                 {activeFilterCount > 0 && (
-                  <span className="absolute -top-2 -right-2 bg-indigo-600 text-white w-5 h-5 rounded-full text-xs flex items-center justify-center">
+                  <span className="absolute -top-2 -right-2 bg-amber-700 text-white w-5 h-5 rounded-full text-xs flex items-center justify-center">
                     {activeFilterCount}
                   </span>
                 )}
@@ -88,7 +88,7 @@ export default function ArticlesListing({ initialArticles }: { initialArticles: 
               <select
                 value={sort}
                 onChange={(e) => setSort(e.target.value)}
-                className="px-4 py-2 border border-gray-300 rounded-xl bg-white focus:outline-none focus:ring-2 focus:ring-indigo-600"
+                className="px-4 py-2 border border-gray-300 rounded-xl bg-white focus:outline-none focus:ring-2 focus:ring-amber-700"
               >
                 <option value="newest">Les plus récents</option>
                 <option value="price_asc">Prix croissant</option>

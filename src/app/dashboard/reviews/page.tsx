@@ -84,7 +84,7 @@ export default function ReviewsPage() {
       <div className="flex border-b border-gray-200">
         {tabs.map((t) => (
           <button key={t.id} onClick={() => setActiveTab(t.id)}
-            className={`px-4 py-3 text-sm font-medium border-b-2 transition-colors ${activeTab === t.id ? 'border-indigo-600 text-indigo-600' : 'border-transparent text-gray-500 hover:text-gray-700'}`}>
+            className={`px-4 py-3 text-sm font-medium border-b-2 transition-colors ${activeTab === t.id ? 'border-amber-700 text-amber-700' : 'border-transparent text-gray-500 hover:text-gray-700'}`}>
             {t.label}
           </button>
         ))}
@@ -100,7 +100,7 @@ export default function ReviewsPage() {
                     <span className="font-bold text-gray-900">{review.authorName}</span>
                     <span className="text-gray-400 text-sm">• {review.date ? review.date.slice(0, 10) : ''}</span>
                   </div>
-                  <div className="text-sm text-indigo-600 font-medium mb-2">Produit : {titles[review.articleId] || review.articleId}</div>
+                  <div className="text-sm text-amber-700 font-medium mb-2">Produit : {titles[review.articleId] || review.articleId}</div>
                   <div className="flex gap-1 mb-3">{renderStars(review.rating)}</div>
                   <p className="text-gray-700 text-sm">{review.text}</p>
                 </div>

@@ -33,7 +33,7 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
           {items.length === 0 ? (
             <div className="flex-1 flex flex-col items-center justify-center text-gray-500 gap-4">
               <span className="text-lg">Votre panier est vide</span>
-              <button onClick={onClose} className="text-indigo-600 font-medium hover:underline">
+              <button onClick={onClose} className="text-amber-700 font-medium hover:underline">
                 Continuer mes achats
               </button>
             </div>
@@ -50,21 +50,21 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
                 <div className="flex-1 flex flex-col justify-between">
                   <div className="flex justify-between items-start pr-6">
                     <h3 className="font-semibold text-gray-800 line-clamp-1">{item.title}</h3>
-                    <span className="font-bold text-indigo-600 whitespace-nowrap">{item.price * item.quantity} DA</span>
+                    <span className="font-bold text-amber-700 whitespace-nowrap">{item.price * item.quantity} DA</span>
                   </div>
                   {item.variantName && <p className="text-xs text-gray-500">{item.variantName}</p>}
                   <div className="flex items-center justify-between mt-2">
                     <div className="flex items-center bg-white border border-gray-200 rounded-lg">
                       <button
                         onClick={() => updateQuantity(item.articleId, Math.max(1, item.quantity - 1), item.variantId)}
-                        className="p-1 text-gray-500 hover:text-indigo-600"
+                        className="p-1 text-gray-500 hover:text-amber-700"
                       >
                         <Minus size={16} />
                       </button>
                       <span className="w-8 text-center text-sm font-medium">{item.quantity}</span>
                       <button
                         onClick={() => updateQuantity(item.articleId, item.quantity + 1, item.variantId)}
-                        className="p-1 text-gray-500 hover:text-indigo-600"
+                        className="p-1 text-gray-500 hover:text-amber-700"
                       >
                         <Plus size={16} />
                       </button>
@@ -92,14 +92,14 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
               <Link
                 href="/cart"
                 onClick={onClose}
-                className="w-full py-3 px-4 text-center border-2 border-indigo-600 text-indigo-600 rounded-xl font-semibold hover:bg-indigo-50 transition-colors"
+                className="w-full py-3 px-4 text-center border-2 border-amber-700 text-amber-700 rounded-xl font-semibold hover:bg-amber-50 transition-colors"
               >
                 Voir le panier
               </Link>
               <Link
                 href="/checkout"
                 onClick={onClose}
-                className="w-full py-3 px-4 text-center bg-indigo-600 text-white rounded-xl font-semibold hover:bg-indigo-700 transition-colors shadow-sm"
+                className="w-full py-3 px-4 text-center bg-amber-700 text-white rounded-xl font-semibold hover:bg-amber-800 transition-colors shadow-sm"
               >
                 Passer à la caisse
               </Link>

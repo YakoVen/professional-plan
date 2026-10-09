@@ -92,7 +92,7 @@ export default function OrderTable() {
             <input
               type="text"
               placeholder="Rechercher (ID, nom, tel)..."
-              className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-indigo-600 focus:border-transparent"
+              className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-amber-700 focus:border-transparent"
               value={searchTerm}
               onChange={(e) => { setSearchTerm(e.target.value); setPage(0); }}
             />
@@ -100,7 +100,7 @@ export default function OrderTable() {
           <div className="relative">
             <Filter className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size={18} />
             <select
-              className="pl-10 pr-8 py-2 border border-gray-300 rounded-lg text-sm appearance-none bg-white focus:ring-2 focus:ring-indigo-600 focus:border-transparent"
+              className="pl-10 pr-8 py-2 border border-gray-300 rounded-lg text-sm appearance-none bg-white focus:ring-2 focus:ring-amber-700 focus:border-transparent"
               value={statusFilter}
               onChange={(e) => { setStatusFilter(e.target.value); setPage(0); }}
             >
@@ -161,7 +161,7 @@ export default function OrderTable() {
                   <td className="p-4 text-right">
                     <button
                       onClick={() => setSelectedOrder(order)}
-                      className="p-2 text-gray-400 hover:text-indigo-600 rounded-lg hover:bg-indigo-50 transition-colors inline-flex"
+                      className="p-2 text-gray-400 hover:text-amber-700 rounded-lg hover:bg-amber-50 transition-colors inline-flex"
                       title="Voir les détails"
                     >
                       <Eye size={18} />

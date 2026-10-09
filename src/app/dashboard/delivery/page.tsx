@@ -41,7 +41,7 @@ export default function DeliveryPage() {
         <button 
           onClick={handleSave}
           disabled={isSaving}
-          className="bg-indigo-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-indigo-700 transition-colors flex items-center gap-2 disabled:opacity-70"
+          className="bg-amber-700 text-white px-4 py-2 rounded-lg font-medium hover:bg-amber-800 transition-colors flex items-center gap-2 disabled:opacity-70"
         >
           {isSaving ? <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div> : <Save size={18} />}
           Enregistrer les modifications
@@ -55,7 +55,7 @@ export default function DeliveryPage() {
             <input 
               type="text"
               placeholder="Rechercher une wilaya..."
-              className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-indigo-600 focus:border-transparent"
+              className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-amber-700 focus:border-transparent"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />

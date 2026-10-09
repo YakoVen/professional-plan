@@ -20,11 +20,11 @@ export default function EditCard({ title, subtitle, editHref, onEdit, onDelete }
       </div>
       <div className="flex items-center gap-2">
         {editHref ? (
-          <Link href={editHref} className="p-2 text-gray-400 hover:text-indigo-600 bg-gray-50 hover:bg-indigo-50 rounded-lg transition-colors">
+          <Link href={editHref} className="p-2 text-gray-400 hover:text-amber-700 bg-gray-50 hover:bg-amber-50 rounded-lg transition-colors">
             <Edit size={16} />
           </Link>
         ) : (
-          <button onClick={onEdit} className="p-2 text-gray-400 hover:text-indigo-600 bg-gray-50 hover:bg-indigo-50 rounded-lg transition-colors">
+          <button onClick={onEdit} className="p-2 text-gray-400 hover:text-amber-700 bg-gray-50 hover:bg-amber-50 rounded-lg transition-colors">
             <Edit size={16} />
           </button>
         )}

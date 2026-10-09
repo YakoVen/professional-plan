@@ -116,7 +116,7 @@ export default function BundlesAdminPage() {
     <div className="space-y-6">
       <div className="flex justify-between items-center">
         <h1 className="text-2xl font-bold">Lots &amp; Packs</h1>
-        <button onClick={() => openModal()} className="flex items-center gap-2 bg-indigo-600 text-white px-4 py-2 rounded-xl hover:bg-indigo-700">
+        <button onClick={() => openModal()} className="flex items-center gap-2 bg-amber-700 text-white px-4 py-2 rounded-xl hover:bg-amber-800">
           <Plus size={18} /> Nouveau lot
         </button>
       </div>
@@ -125,7 +125,7 @@ export default function BundlesAdminPage() {
         {bundles.map((b) => (
           <div key={b.id} className="bg-white rounded-xl border p-5 flex flex-wrap items-center justify-between gap-3">
             <div className="flex items-center gap-3">
-              <div className="p-2 bg-indigo-50 text-indigo-600 rounded-lg"><Package size={20} /></div>
+              <div className="p-2 bg-amber-50 text-amber-700 rounded-lg"><Package size={20} /></div>
               <div>
                 <h3 className="font-bold">{b.name}</h3>
                 <p className="text-sm text-gray-500">{b.productIds.length} produits • {b.bundlePrice.toLocaleString()} DA</p>
@@ -133,7 +133,7 @@ export default function BundlesAdminPage() {
             </div>
             <div className="flex items-center gap-2">
               <AvailableButton isActive={b.active} onClick={() => handleToggle(b)} />
-              <button onClick={() => openModal(b)} className="p-2 text-indigo-600 hover:bg-indigo-50 rounded-lg"><Edit size={16} /></button>
+              <button onClick={() => openModal(b)} className="p-2 text-amber-700 hover:bg-amber-50 rounded-lg"><Edit size={16} /></button>
               <button onClick={() => handleDelete(b.id)} className="p-2 text-red-600 hover:bg-red-50 rounded-lg"><Trash2 size={16} /></button>
             </div>
           </div>
@@ -166,7 +166,7 @@ export default function BundlesAdminPage() {
                 {products.map((p) => (
                   <label key={p.id} className="flex items-center gap-3 px-3 py-2 hover:bg-gray-50 cursor-pointer text-sm">
                     <input type="checkbox" checked={form.productIds.includes(p.id)} onChange={() => toggleProduct(p.id)}
-                      className="rounded text-indigo-600" />
+                      className="rounded text-amber-700" />
                     <span className="flex-1 truncate">{p.title}</span>
                     <span className="text-gray-500">{p.price.toLocaleString()} DA</span>
                   </label>
@@ -180,9 +180,9 @@ export default function BundlesAdminPage() {
             </div>
             <label className="flex items-center gap-2 text-sm">
               <input type="checkbox" checked={form.active} onChange={(e) => setForm({ ...form, active: e.target.checked })}
-                className="rounded text-indigo-600" /> Actif
+                className="rounded text-amber-700" /> Actif
             </label>
-            <button type="submit" disabled={saving} className="w-full bg-indigo-600 text-white py-3 rounded-xl font-bold hover:bg-indigo-700 disabled:opacity-50">
+            <button type="submit" disabled={saving} className="w-full bg-amber-700 text-white py-3 rounded-xl font-bold hover:bg-amber-800 disabled:opacity-50">
               {saving ? 'Sauvegarde...' : 'Sauvegarder'}
             </button>
           </form>

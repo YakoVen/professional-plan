@@ -136,7 +136,7 @@ export default function ArticlesPage() {
           <button onClick={exportCSV} className="flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-50 bg-white">
             <Download size={16} /> Exporter
           </button>
-          <Link href="/dashboard/articles/add" className="flex items-center gap-2 px-4 py-2 bg-indigo-600 text-white rounded-lg text-sm font-medium hover:bg-indigo-700">
+          <Link href="/dashboard/articles/add" className="flex items-center gap-2 px-4 py-2 bg-amber-700 text-white rounded-lg text-sm font-medium hover:bg-amber-800">
             <Plus size={16} /> Ajouter
           </Link>
         </div>
@@ -149,7 +149,7 @@ export default function ArticlesPage() {
             <input
               type="text"
               placeholder="Rechercher un article..."
-              className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-indigo-600 focus:border-transparent"
+              className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-amber-700 focus:border-transparent"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />
@@ -191,7 +191,7 @@ export default function ArticlesPage() {
                       <AvailableButton isActive={article.active} onClick={() => toggleActive(article.id, article.active)} />
                     </td>
                     <td className="p-4 text-right space-x-2">
-                      <Link href={`/dashboard/articles/${article.id}`} className="p-2 text-gray-400 hover:text-indigo-600 transition-colors inline-flex">
+                      <Link href={`/dashboard/articles/${article.id}`} className="p-2 text-gray-400 hover:text-amber-700 transition-colors inline-flex">
                         <Edit size={18} />
                       </Link>
                       <button onClick={() => setDeleteId(article.id)} className="p-2 text-gray-400 hover:text-red-600 transition-colors inline-flex">

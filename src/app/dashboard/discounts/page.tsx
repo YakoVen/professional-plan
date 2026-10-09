@@ -110,7 +110,7 @@ export default function DiscountsPage() {
     <div className="space-y-6">
       <div className="flex justify-between items-center">
         <h1 className="text-2xl font-bold">Remises automatiques</h1>
-        <button onClick={() => openModal()} className="flex items-center gap-2 bg-indigo-600 text-white px-4 py-2 rounded-xl hover:bg-indigo-700">
+        <button onClick={() => openModal()} className="flex items-center gap-2 bg-amber-700 text-white px-4 py-2 rounded-xl hover:bg-amber-800">
           <Plus size={18} /> Nouvelle remise
         </button>
       </div>
@@ -139,7 +139,7 @@ export default function DiscountsPage() {
                 <td className="px-4 py-3"><AvailableButton isActive={d.active} onClick={() => handleToggle(d)} /></td>
                 <td className="px-4 py-3">
                   <div className="flex gap-2 justify-end">
-                    <button onClick={() => openModal(d)} className="p-2 text-indigo-600 hover:bg-indigo-50 rounded-lg"><Edit size={16} /></button>
+                    <button onClick={() => openModal(d)} className="p-2 text-amber-700 hover:bg-amber-50 rounded-lg"><Edit size={16} /></button>
                     <button onClick={() => handleDelete(d.id)} className="p-2 text-red-600 hover:bg-red-50 rounded-lg"><Trash2 size={16} /></button>
                   </div>
                 </td>
@@ -192,9 +192,9 @@ export default function DiscountsPage() {
             </div>
             <label className="flex items-center gap-2 text-sm">
               <input type="checkbox" checked={formData.active} onChange={(e) => setFormData({ ...formData, active: e.target.checked })}
-                className="rounded text-indigo-600" /> Actif
+                className="rounded text-amber-700" /> Actif
             </label>
-            <button type="submit" disabled={saving} className="w-full bg-indigo-600 text-white py-3 rounded-xl font-bold hover:bg-indigo-700 disabled:opacity-50">
+            <button type="submit" disabled={saving} className="w-full bg-amber-700 text-white py-3 rounded-xl font-bold hover:bg-amber-800 disabled:opacity-50">
               {saving ? 'Sauvegarde...' : 'Sauvegarder'}
             </button>
           </form>

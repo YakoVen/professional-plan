@@ -122,7 +122,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
   };
 
   if (isChecking) {
-    return <div className="min-h-screen flex items-center justify-center bg-gray-50"><div className="w-8 h-8 border-4 border-indigo-600 border-t-transparent rounded-full animate-spin"></div></div>;
+    return <div className="min-h-screen flex items-center justify-center bg-gray-50"><div className="w-8 h-8 border-4 border-amber-700 border-t-transparent rounded-full animate-spin"></div></div>;
   }
 
   if (!isAuthenticated) {
@@ -139,7 +139,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
               <input 
                 type="email" 
                 required 
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-600 focus:border-transparent"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-700 focus:border-transparent"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
@@ -149,7 +149,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
               <input 
                 type="password" 
                 required 
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-600 focus:border-transparent"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-700 focus:border-transparent"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
@@ -157,7 +157,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
             {loginError && <p className="text-red-500 text-sm">{loginError}</p>}
             <button 
               type="submit"
-              className="w-full bg-indigo-600 text-white font-medium py-2.5 rounded-lg hover:bg-indigo-700 transition-colors"
+              className="w-full bg-amber-700 text-white font-medium py-2.5 rounded-lg hover:bg-amber-800 transition-colors"
             >
               Se connecter
             </button>
@@ -173,7 +173,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col md:flex-row">
       {/* Mobile header */}
-      <div className="md:hidden bg-gray-900 text-white p-4 flex items-center justify-between">
+      <div className="md:hidden bg-stone-950 text-white p-4 flex items-center justify-between">
         <span className="font-bold text-lg">Admin Panel</span>
         <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -183,12 +183,12 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
       {/* Sidebar */}
       <aside className={`
         ${isMobileMenuOpen ? 'block' : 'hidden'} 
-        md:flex flex-col w-full md:w-64 bg-gray-900 text-gray-300
+        md:flex flex-col w-full md:w-64 bg-stone-950 text-gray-300
         min-h-screen shrink-0
       `}>
         <div className="p-6 hidden md:block">
           <h1 className="text-2xl font-bold text-white">E-Commerce</h1>
-          <p className="text-xs text-indigo-400 mt-1">Intermediate Plan</p>
+          <p className="text-xs text-indigo-400 mt-1">Professional Plan</p>
         </div>
         
         <nav className="flex-1 px-4 py-4 space-y-1">
@@ -201,8 +201,8 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                 className={`
                   flex items-center gap-3 px-4 py-3 rounded-lg transition-colors
                   ${isActive 
-                    ? 'bg-indigo-600 text-white' 
-                    : 'hover:bg-gray-800 hover:text-white'}
+                    ? 'bg-amber-700 text-white' 
+                    : 'hover:bg-stone-800 hover:text-white'}
                 `}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
@@ -213,10 +213,10 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
           })}
         </nav>
 
-        <div className="p-4 mt-auto border-t border-gray-800">
+        <div className="p-4 mt-auto border-t border-stone-800">
           <button 
             onClick={handleLogout}
-            className="flex items-center gap-3 px-4 py-3 w-full text-left rounded-lg text-gray-400 hover:bg-gray-800 hover:text-white transition-colors"
+            className="flex items-center gap-3 px-4 py-3 w-full text-left rounded-lg text-gray-400 hover:bg-stone-800 hover:text-white transition-colors"
           >
             <LogOut size={20} />
             <span className="font-medium">Déconnexion</span>

@@ -87,11 +87,11 @@ export default function InventoryPage() {
         <label className="flex items-center gap-2 text-sm font-medium pb-2">
           <input type="checkbox" checked={settings.hideOutOfStock}
             onChange={(e) => setSettings({ ...settings, hideOutOfStock: e.target.checked })}
-            className="rounded text-indigo-600" />
+            className="rounded text-amber-700" />
           <span className="flex items-center gap-1"><EyeOff size={16} /> Masquer les ruptures en boutique</span>
         </label>
         <button onClick={handleSaveSettings} disabled={saving}
-          className="flex items-center gap-2 bg-indigo-600 text-white px-4 py-2 rounded-xl hover:bg-indigo-700 disabled:opacity-50">
+          className="flex items-center gap-2 bg-amber-700 text-white px-4 py-2 rounded-xl hover:bg-amber-800 disabled:opacity-50">
           <Save size={16} /> Sauvegarder
         </button>
       </div>
@@ -125,7 +125,7 @@ export default function InventoryPage() {
       </div>
 
       <div className="bg-white rounded-xl border overflow-hidden">
-        <h2 className="font-bold p-6 pb-2 flex items-center gap-2"><Bell size={18} className="text-indigo-600" /> Alertes réassort ({requests.length})</h2>
+        <h2 className="font-bold p-6 pb-2 flex items-center gap-2"><Bell size={18} className="text-amber-700" /> Alertes réassort ({requests.length})</h2>
         <div className="divide-y">
           {requests.map((r) => (
             <div key={r.id} className="flex justify-between items-center px-6 py-3 text-sm">
@@ -133,7 +133,7 @@ export default function InventoryPage() {
                 <p className="font-medium">{titles[r.articleId] || r.articleId}</p>
                 <p className="text-gray-500">{r.contact} • {r.createdAt ? r.createdAt.slice(0, 10) : ''}</p>
               </div>
-              <button onClick={() => handleNotified(r.id)} className="text-indigo-600 text-sm font-medium hover:underline">Marquer notifié</button>
+              <button onClick={() => handleNotified(r.id)} className="text-amber-700 text-sm font-medium hover:underline">Marquer notifié</button>
             </div>
           ))}
           {requests.length === 0 && <p className="px-6 py-8 text-center text-sm text-gray-500">Aucune demande en attente.</p>}

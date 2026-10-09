@@ -248,7 +248,7 @@ export default function CheckoutPage() {
               <div className="space-y-2">
                 <label className="text-sm font-medium text-gray-700">Nom complet</label>
                 <input name="fullName" required type="text" defaultValue={userProfile?.displayName || ''}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-indigo-600" />
+                  className="w-full px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-amber-700" />
               </div>
               <div className="space-y-2">
                 <label className="text-sm font-medium text-gray-700">Téléphone</label>
@@ -261,14 +261,14 @@ export default function CheckoutPage() {
                   pattern="0[5-7][0-9]{8}"
                   title="Numéro algérien : 05, 06 ou 07 suivi de 8 chiffres"
                   defaultValue={userProfile?.phone || ''}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-indigo-600"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-amber-700"
                 />
                 <p className="text-xs text-gray-500">Format 05/06/07 + 8 chiffres. C&apos;est le numéro que le transporteur appelle.</p>
               </div>
               <div className="space-y-2 md:col-span-2">
                 <label className="text-sm font-medium text-gray-700">Email (optionnel)</label>
                 <input name="email" type="email" defaultValue={userProfile?.email || currentUser?.email || ''}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-indigo-600" />
+                  className="w-full px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-amber-700" />
               </div>
               <div className="md:col-span-2">
                 <AddressPicker
@@ -294,7 +294,7 @@ export default function CheckoutPage() {
                   rows={2}
                   required={deliveryMethod === 'home'}
                   defaultValue={defaultAddress?.address || ''}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-indigo-600"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-amber-700"
                 />
               </div>
             </div>
@@ -304,9 +304,9 @@ export default function CheckoutPage() {
           <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm space-y-6">
             <h2 className="text-xl font-bold text-gray-900">Mode de livraison</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <label className={`cursor-pointer flex items-center p-4 border-2 rounded-xl transition ${deliveryMethod === 'home' ? 'border-indigo-600 bg-indigo-50' : 'border-gray-200 hover:border-gray-300'}`}>
+              <label className={`cursor-pointer flex items-center p-4 border-2 rounded-xl transition ${deliveryMethod === 'home' ? 'border-amber-700 bg-amber-50' : 'border-gray-200 hover:border-gray-300'}`}>
                 <input type="radio" name="delivery" value="home" checked={deliveryMethod === 'home'} onChange={() => setDeliveryMethod('home')} className="hidden" />
-                <Truck className={`w-6 h-6 mr-3 ${deliveryMethod === 'home' ? 'text-indigo-600' : 'text-gray-400'}`} />
+                <Truck className={`w-6 h-6 mr-3 ${deliveryMethod === 'home' ? 'text-amber-700' : 'text-gray-400'}`} />
                 <div className="flex-1">
                   <div className="font-medium text-gray-900">À domicile</div>
                   <div className="text-sm text-gray-500">Livraison jusqu&apos;à votre porte</div>
@@ -314,9 +314,9 @@ export default function CheckoutPage() {
                 <div className="font-bold text-gray-900">{wilayaCode ? fmt(homePrice) : '--'}</div>
               </label>
 
-              <label className={`cursor-pointer flex items-center p-4 border-2 rounded-xl transition ${deliveryMethod === 'desk' ? 'border-indigo-600 bg-indigo-50' : 'border-gray-200 hover:border-gray-300'}`}>
+              <label className={`cursor-pointer flex items-center p-4 border-2 rounded-xl transition ${deliveryMethod === 'desk' ? 'border-amber-700 bg-amber-50' : 'border-gray-200 hover:border-gray-300'}`}>
                 <input type="radio" name="delivery" value="desk" checked={deliveryMethod === 'desk'} onChange={() => setDeliveryMethod('desk')} className="hidden" />
-                <Building2 className={`w-6 h-6 mr-3 ${deliveryMethod === 'desk' ? 'text-indigo-600' : 'text-gray-400'}`} />
+                <Building2 className={`w-6 h-6 mr-3 ${deliveryMethod === 'desk' ? 'text-amber-700' : 'text-gray-400'}`} />
                 <div className="flex-1">
                   <div className="font-medium text-gray-900">Point de relais</div>
                   <div className="text-sm text-gray-500">Bureau de livraison</div>
@@ -392,7 +392,7 @@ export default function CheckoutPage() {
                     <div className="font-medium line-clamp-1">{item.title}</div>
                     {item.variantName && <div className="text-gray-500 text-xs">{item.variantName}</div>}
                     <div className="text-gray-500">Qté: {item.quantity}</div>
-                    <div className="font-medium text-indigo-600">{fmt(item.price * item.quantity)}</div>
+                    <div className="font-medium text-amber-700">{fmt(item.price * item.quantity)}</div>
                   </div>
                 </div>
               ))}
@@ -403,7 +403,7 @@ export default function CheckoutPage() {
                 <div className="relative flex-1">
                   <Tag className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 w-4 h-4" />
                   <input type="text" placeholder="Code promo" value={coupon} onChange={(e) => setCoupon(e.target.value.toUpperCase())}
-                    className="w-full pl-9 pr-3 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-indigo-600 text-sm uppercase" />
+                    className="w-full pl-9 pr-3 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-amber-700 text-sm uppercase" />
                 </div>
                 <button type="button" onClick={handleValidateCoupon} className="px-4 py-2 bg-gray-900 text-white rounded-xl text-sm font-medium hover:bg-gray-800 transition">
                   Appliquer
@@ -421,7 +421,7 @@ export default function CheckoutPage() {
                       onChange={(e) => setPointsToUse(e.target.value)}
                       placeholder="0" className="flex-1 border rounded-xl p-2 text-sm" />
                     <button type="button" onClick={() => setPointsToUse(String(pointsBalance))}
-                      className="text-xs font-medium text-indigo-600 hover:underline">Tout utiliser</button>
+                      className="text-xs font-medium text-amber-700 hover:underline">Tout utiliser</button>
                   </div>
                   <p className="text-xs text-gray-500 mt-1">1 point = {loyaltyCfg.valuePerPoint} DA • vous gagnez des points à chaque commande</p>
                 </div>
@@ -456,7 +456,7 @@ export default function CheckoutPage() {
             </div>
 
             <button type="submit" disabled={loading || !wilayaCode || !communeName || (deliveryMethod === 'desk' && !stopDeskId)}
-              className="w-full bg-indigo-600 text-white py-4 rounded-xl font-bold flex justify-center items-center gap-2 hover:bg-indigo-700 transition disabled:opacity-50">
+              className="w-full bg-amber-700 text-white py-4 rounded-xl font-bold flex justify-center items-center gap-2 hover:bg-amber-800 transition disabled:opacity-50">
               {loading ? 'Traitement...' : (<><Check className="w-5 h-5" /> Confirmer la commande</>)}
             </button>
             <p className="text-xs text-center text-gray-500">

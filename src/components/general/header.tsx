@@ -37,16 +37,16 @@ export default function Header() {
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
-          <Link href="/" className="text-2xl font-bold text-indigo-600 tracking-tight">
+          <Link href="/" className="text-2xl font-bold text-amber-700 tracking-tight">
             Ma Boutique
           </Link>
         </div>
 
         <nav className="hidden md:flex items-center gap-8">
-          <Link href="/" className="text-gray-700 hover:text-indigo-600 font-medium transition-colors">
+          <Link href="/" className="text-gray-700 hover:text-amber-700 font-medium transition-colors">
             Accueil
           </Link>
-          <Link href="/articles" className="text-gray-700 hover:text-indigo-600 font-medium transition-colors">
+          <Link href="/articles" className="text-gray-700 hover:text-amber-700 font-medium transition-colors">
             Boutique
           </Link>
         </nav>
@@ -62,7 +62,7 @@ export default function Header() {
                 onChange={(e) => setSearchQuery(e.target.value)}
                 autoFocus
               />
-              <button type="submit" className="text-gray-500 hover:text-indigo-600">
+              <button type="submit" className="text-gray-500 hover:text-amber-700">
                 <Search size={18} />
               </button>
               <button type="button" onClick={() => setIsSearchOpen(false)} className="ml-2 text-gray-400">
@@ -70,12 +70,12 @@ export default function Header() {
               </button>
             </form>
           ) : (
-            <button onClick={() => setIsSearchOpen(true)} className="text-gray-700 hover:text-indigo-600 p-2">
+            <button onClick={() => setIsSearchOpen(true)} className="text-gray-700 hover:text-amber-700 p-2">
               <Search size={24} />
             </button>
           )}
 
-          <Link href={currentUser ? '/account' : '/login'} className="text-gray-700 hover:text-indigo-600 p-2">
+          <Link href={currentUser ? '/account' : '/login'} className="text-gray-700 hover:text-amber-700 p-2">
             <User size={24} />
           </Link>
 
@@ -88,7 +88,7 @@ export default function Header() {
             </select>
           )}
 
-          <button onClick={() => setIsCartDrawerOpen(true)} className="text-gray-700 hover:text-indigo-600 p-2">
+          <button onClick={() => setIsCartDrawerOpen(true)} className="text-gray-700 hover:text-amber-700 p-2">
             <CartIcon />
           </button>
         </div>

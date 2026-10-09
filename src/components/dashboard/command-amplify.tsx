@@ -103,7 +103,7 @@ export default function CommandAmplify({ order, onClose, onUpdated }: CommandAmp
                   <div className="flex items-start gap-3">
                     <Phone className="text-gray-400 mt-0.5" size={18} />
                     <div>
-                      <a href={`tel:${order.phone}`} className="text-sm font-medium text-indigo-600 hover:underline">{order.phone}</a>
+                      <a href={`tel:${order.phone}`} className="text-sm font-medium text-amber-700 hover:underline">{order.phone}</a>
                     </div>
                   </div>
                   <div className="flex items-start gap-3 sm:col-span-2">
@@ -111,7 +111,7 @@ export default function CommandAmplify({ order, onClose, onUpdated }: CommandAmp
                     <div>
                       <p className="text-sm font-medium text-gray-900">{order.address || '—'}</p>
                       <p className="text-sm text-gray-500">{order.commune}, {order.wilaya}</p>
-                      <p className="text-xs text-indigo-600 font-medium mt-1 uppercase bg-indigo-50 inline-block px-2 py-0.5 rounded">
+                      <p className="text-xs text-amber-700 font-medium mt-1 uppercase bg-amber-50 inline-block px-2 py-0.5 rounded">
                         Livraison: {order.deliveryMethod === 'home' ? 'À domicile' : 'Point relais'}
                       </p>
                     </div>
@@ -176,7 +176,7 @@ export default function CommandAmplify({ order, onClose, onUpdated }: CommandAmp
                     <select
                       value={status}
                       onChange={(e) => setStatus(Number(e.target.value))}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-indigo-600 focus:border-transparent bg-white"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-amber-700 focus:border-transparent bg-white"
                     >
                       {STATES.map((s) => (
                         <option key={s.value} value={s.value}>{s.label}</option>
@@ -191,14 +191,14 @@ export default function CommandAmplify({ order, onClose, onUpdated }: CommandAmp
                       value={newNote}
                       onChange={(e) => setNewNote(e.target.value)}
                       placeholder="Ex: Expédié via Yalidine. Code: 1234..."
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-indigo-600 focus:border-transparent resize-none"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-amber-700 focus:border-transparent resize-none"
                     ></textarea>
                   </div>
 
                   <button
                     onClick={handleSave}
                     disabled={isSaving}
-                    className="w-full flex items-center justify-center gap-2 bg-indigo-600 text-white py-2 rounded-lg text-sm font-medium hover:bg-indigo-700 transition-colors disabled:opacity-70"
+                    className="w-full flex items-center justify-center gap-2 bg-amber-700 text-white py-2 rounded-lg text-sm font-medium hover:bg-amber-800 transition-colors disabled:opacity-70"
                   >
                     <Save size={16} /> {isSaving ? 'Sauvegarde...' : 'Sauvegarder'}
                   </button>
@@ -214,7 +214,7 @@ export default function CommandAmplify({ order, onClose, onUpdated }: CommandAmp
                       {idx !== history.length - 1 && (
                         <div className="absolute left-[11px] top-6 bottom-[-16px] w-0.5 bg-gray-100"></div>
                       )}
-                      <div className="w-6 h-6 rounded-full bg-indigo-50 text-indigo-600 flex items-center justify-center shrink-0 border-2 border-white z-10 relative">
+                      <div className="w-6 h-6 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border-2 border-white z-10 relative">
                         {idx === history.length - 1 ? <Clock size={12} /> : <MessageSquare size={12} />}
                       </div>
                       <div>

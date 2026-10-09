@@ -177,13 +177,13 @@ function TrackContent() {
               placeholder="Ex: ORDER123"
               value={orderId}
               onChange={(e) => setOrderId(e.target.value)}
-              className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-indigo-600 outline-none"
+              className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-amber-700 outline-none"
             />
           </div>
           <button
             onClick={handleTrack}
             disabled={loading}
-            className="px-6 py-3 bg-indigo-600 text-white font-medium rounded-xl hover:bg-indigo-700 transition disabled:opacity-50"
+            className="px-6 py-3 bg-amber-700 text-white font-medium rounded-xl hover:bg-amber-800 transition disabled:opacity-50"
           >
             {loading ? 'Recherche...' : 'Suivre'}
           </button>
@@ -265,7 +265,7 @@ function TrackContent() {
             <div className="relative">
               <div className="absolute left-0 top-1/2 -translate-y-1/2 w-full h-1 bg-gray-100 rounded-full"></div>
               <div
-                className="absolute left-0 top-1/2 -translate-y-1/2 h-1 bg-indigo-600 rounded-full transition-all duration-500"
+                className="absolute left-0 top-1/2 -translate-y-1/2 h-1 bg-amber-700 rounded-full transition-all duration-500"
                 style={{ width: `${(getStepIndex(trackingData.status) / (steps.length - 1)) * 100}%` }}
               ></div>
 
@@ -278,8 +278,8 @@ function TrackContent() {
                   return (
                     <div key={step.id} className="flex flex-col items-center">
                       <div className={`w-10 h-10 rounded-full flex items-center justify-center relative z-10 transition-colors ${
-                        isActive ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-200' :
-                        isPast ? 'bg-indigo-600 text-white' :
+                        isActive ? 'bg-amber-700 text-white shadow-lg shadow-amber-200' :
+                        isPast ? 'bg-amber-700 text-white' :
                         'bg-gray-100 text-gray-400'
                       }`}>
                         <Icon className="w-5 h-5" />
@@ -308,7 +308,7 @@ function TrackContent() {
                 {/* Live courier events first when available, then the order log. */}
                 {(trackingData.liveEvents ?? []).map((e, i: number) => (
                   <div key={`live-${i}`} className="flex gap-4">
-                    <div className="w-2 h-2 mt-2 rounded-full bg-indigo-600 flex-shrink-0"></div>
+                    <div className="w-2 h-2 mt-2 rounded-full bg-amber-700 flex-shrink-0"></div>
                     <div>
                       <p className="text-sm font-medium text-gray-900">{e.label}</p>
                       <p className="text-xs text-gray-500">{e.timestamp}</p>

@@ -34,7 +34,7 @@ export default function AccountLayout({ children }: { children: React.ReactNode 
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-50">
-        <div className="w-8 h-8 border-4 border-indigo-600 border-t-transparent rounded-full animate-spin" />
+        <div className="w-8 h-8 border-4 border-amber-700 border-t-transparent rounded-full animate-spin" />
       </div>
     );
   }
@@ -52,7 +52,7 @@ export default function AccountLayout({ children }: { children: React.ReactNode 
         {/* Mobile Header */}
         <div className="lg:hidden flex items-center justify-between bg-white p-4 rounded-xl shadow-sm mb-4 border border-gray-100">
           <div className="flex items-center space-x-3">
-            <div className="h-10 w-10 rounded-full bg-indigo-600 flex items-center justify-center text-white font-bold text-sm">
+            <div className="h-10 w-10 rounded-full bg-amber-700 flex items-center justify-center text-white font-bold text-sm">
               {initials}
             </div>
             <p className="text-sm font-medium text-gray-900">{displayName}</p>
@@ -73,7 +73,7 @@ export default function AccountLayout({ children }: { children: React.ReactNode 
               {/* User info — desktop */}
               <div className="p-6 border-b border-gray-100 hidden lg:block">
                 <div className="flex items-center space-x-4">
-                  <div className="h-12 w-12 rounded-full bg-indigo-600 flex items-center justify-center text-white text-lg font-bold">
+                  <div className="h-12 w-12 rounded-full bg-amber-700 flex items-center justify-center text-white text-lg font-bold">
                     {initials}
                   </div>
                   <div>
@@ -93,10 +93,10 @@ export default function AccountLayout({ children }: { children: React.ReactNode 
                       href={item.href}
                       onClick={() => setIsMobileMenuOpen(false)}
                       className={`flex items-center px-4 py-3 text-sm font-medium rounded-xl transition-colors ${
-                        isActive ? 'bg-indigo-50 text-indigo-700' : 'text-gray-700 hover:bg-gray-50 hover:text-indigo-600'
+                        isActive ? 'bg-amber-50 text-amber-800' : 'text-gray-700 hover:bg-gray-50 hover:text-amber-700'
                       }`}
                     >
-                      <Icon className={`mr-3 h-5 w-5 ${isActive ? 'text-indigo-600' : 'text-gray-400'}`} />
+                      <Icon className={`mr-3 h-5 w-5 ${isActive ? 'text-amber-700' : 'text-gray-400'}`} />
                       {item.name}
                     </Link>
                   );

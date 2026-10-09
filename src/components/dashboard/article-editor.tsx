@@ -155,7 +155,7 @@ export default function ArticleEditor({ mode, articleId }: ArticleEditorProps) {
             required
             value={formData.title}
             onChange={e => setFormData({...formData, title: e.target.value})}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-600 focus:border-transparent"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-700 focus:border-transparent"
           />
         </div>
 
@@ -165,7 +165,7 @@ export default function ArticleEditor({ mode, articleId }: ArticleEditorProps) {
             rows={4}
             value={formData.description}
             onChange={e => setFormData({...formData, description: e.target.value})}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-600 focus:border-transparent"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-700 focus:border-transparent"
           />
         </div>
 
@@ -178,7 +178,7 @@ export default function ArticleEditor({ mode, articleId }: ArticleEditorProps) {
               min={1}
               value={formData.price}
               onChange={e => setFormData({...formData, price: parseFloat(e.target.value)})}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-600 focus:border-transparent"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-700 focus:border-transparent"
             />
           </div>
           <div>
@@ -188,7 +188,7 @@ export default function ArticleEditor({ mode, articleId }: ArticleEditorProps) {
               min={0}
               value={formData.oldPrice}
               onChange={e => setFormData({...formData, oldPrice: parseFloat(e.target.value)})}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-600 focus:border-transparent"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-700 focus:border-transparent"
             />
           </div>
           {!hasVariants && (
@@ -200,7 +200,7 @@ export default function ArticleEditor({ mode, articleId }: ArticleEditorProps) {
                 min={0}
                 value={formData.stock}
                 onChange={e => setFormData({...formData, stock: parseInt(e.target.value) || 0})}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-600 focus:border-transparent"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-700 focus:border-transparent"
               />
             </div>
           )}
@@ -208,7 +208,7 @@ export default function ArticleEditor({ mode, articleId }: ArticleEditorProps) {
 
         <label className="flex items-center gap-2 text-sm font-medium">
           <input type="checkbox" checked={formData.active} onChange={(e) => setFormData({ ...formData, active: e.target.checked })}
-            className="rounded text-indigo-600" /> Visible en boutique
+            className="rounded text-amber-700" /> Visible en boutique
         </label>
       </div>
 
@@ -231,7 +231,7 @@ export default function ArticleEditor({ mode, articleId }: ArticleEditorProps) {
               type="text"
               value={formData.brand}
               onChange={e => setFormData({...formData, brand: e.target.value})}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-600 focus:border-transparent"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-700 focus:border-transparent"
             />
           </div>
           <div>
@@ -240,7 +240,7 @@ export default function ArticleEditor({ mode, articleId }: ArticleEditorProps) {
               type="text"
               value={formData.collection}
               onChange={e => setFormData({...formData, collection: e.target.value})}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-600 focus:border-transparent"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-700 focus:border-transparent"
               placeholder="Ex: Été 2026"
             />
           </div>
@@ -252,7 +252,7 @@ export default function ArticleEditor({ mode, articleId }: ArticleEditorProps) {
         <label className="flex items-center justify-between cursor-pointer">
           <h2 className="text-lg font-bold text-gray-900">Variantes</h2>
           <input type="checkbox" checked={hasVariants} onChange={(e) => setHasVariants(e.target.checked)}
-            className="rounded text-indigo-600 w-5 h-5" />
+            className="rounded text-amber-700 w-5 h-5" />
         </label>
         {hasVariants && (
           <div className="space-y-3">
@@ -279,7 +279,7 @@ export default function ArticleEditor({ mode, articleId }: ArticleEditorProps) {
                 </button>
               </div>
             ))}
-            <button type="button" onClick={addVariant} className="flex items-center gap-2 text-indigo-600 text-sm font-medium hover:underline">
+            <button type="button" onClick={addVariant} className="flex items-center gap-2 text-amber-700 text-sm font-medium hover:underline">
               <Plus size={16} /> Ajouter une variante
             </button>
           </div>
@@ -300,11 +300,11 @@ export default function ArticleEditor({ mode, articleId }: ArticleEditorProps) {
               >
                 <X size={12} />
               </button>
-              {idx === 0 && <span className="absolute bottom-1 left-1 text-[10px] bg-indigo-600 text-white px-1.5 rounded">Principale</span>}
+              {idx === 0 && <span className="absolute bottom-1 left-1 text-[10px] bg-amber-700 text-white px-1.5 rounded">Principale</span>}
             </div>
           ))}
-          <label className="w-24 h-24 border-2 border-dashed border-gray-300 rounded-lg flex flex-col items-center justify-center text-gray-500 hover:text-indigo-600 hover:border-indigo-600 cursor-pointer transition-colors">
-            {uploading ? <span className="w-6 h-6 border-2 border-indigo-600 border-t-transparent rounded-full animate-spin" /> : <Upload size={24} />}
+          <label className="w-24 h-24 border-2 border-dashed border-gray-300 rounded-lg flex flex-col items-center justify-center text-gray-500 hover:text-amber-700 hover:border-amber-700 cursor-pointer transition-colors">
+            {uploading ? <span className="w-6 h-6 border-2 border-amber-700 border-t-transparent rounded-full animate-spin" /> : <Upload size={24} />}
             <span className="text-xs mt-1">Ajouter</span>
             <input type="file" className="hidden" multiple accept="image/*" onChange={(e) => handleFiles(e.target.files)} />
           </label>
@@ -320,7 +320,7 @@ export default function ArticleEditor({ mode, articleId }: ArticleEditorProps) {
             type="text"
             value={formData.seoTitle}
             onChange={e => setFormData({...formData, seoTitle: e.target.value})}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-600 focus:border-transparent"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-700 focus:border-transparent"
             placeholder="Titre pour les moteurs de recherche"
           />
         </div>
@@ -330,7 +330,7 @@ export default function ArticleEditor({ mode, articleId }: ArticleEditorProps) {
             rows={2}
             value={formData.seoDescription}
             onChange={e => setFormData({...formData, seoDescription: e.target.value})}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-600 focus:border-transparent"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-700 focus:border-transparent"
             placeholder="Description meta pour les moteurs de recherche"
           />
         </div>
@@ -347,7 +347,7 @@ export default function ArticleEditor({ mode, articleId }: ArticleEditorProps) {
         <button
           type="submit"
           disabled={isSaving || uploading}
-          className="px-6 py-2.5 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700 transition-colors flex items-center gap-2 disabled:opacity-70"
+          className="px-6 py-2.5 bg-amber-700 text-white rounded-lg font-medium hover:bg-amber-800 transition-colors flex items-center gap-2 disabled:opacity-70"
         >
           {isSaving ? (
             <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>

@@ -136,7 +136,7 @@ export default function FlashSalesPage() {
     <div className="space-y-6">
       <div className="flex justify-between items-center">
         <h1 className="text-2xl font-bold">Ventes flash</h1>
-        <button onClick={() => openModal()} className="flex items-center gap-2 bg-indigo-600 text-white px-4 py-2 rounded-xl hover:bg-indigo-700">
+        <button onClick={() => openModal()} className="flex items-center gap-2 bg-amber-700 text-white px-4 py-2 rounded-xl hover:bg-amber-800">
           <Plus size={18} /> Nouvelle vente
         </button>
       </div>
@@ -164,7 +164,7 @@ export default function FlashSalesPage() {
                     <span className="text-xs font-bold text-gray-400">{new Date(s.endsAt) < new Date() ? 'Terminée' : s.active ? 'Programmée' : 'Inactive'}</span>
                   )}
                   <AvailableButton isActive={s.active} onClick={() => handleToggle(s)} />
-                  <button onClick={() => openModal(s)} className="p-2 text-indigo-600 hover:bg-indigo-50 rounded-lg"><Edit size={16} /></button>
+                  <button onClick={() => openModal(s)} className="p-2 text-amber-700 hover:bg-amber-50 rounded-lg"><Edit size={16} /></button>
                   <button onClick={() => handleDelete(s.id)} className="p-2 text-red-600 hover:bg-red-50 rounded-lg"><Trash2 size={16} /></button>
                 </div>
               </div>
@@ -224,7 +224,7 @@ export default function FlashSalesPage() {
                 {products.map((p) => (
                   <label key={p.id} className="flex items-center gap-3 px-3 py-2 hover:bg-gray-50 cursor-pointer text-sm">
                     <input type="checkbox" checked={form.productIds.includes(p.id)} onChange={() => toggleProduct(p.id)}
-                      className="rounded text-indigo-600" />
+                      className="rounded text-amber-700" />
                     <span className="flex-1 truncate">{p.title}</span>
                     <span className="text-gray-500">{p.price.toLocaleString()} DA</span>
                   </label>
@@ -234,10 +234,10 @@ export default function FlashSalesPage() {
             </div>
             <label className="flex items-center gap-2 text-sm">
               <input type="checkbox" checked={form.active} onChange={(e) => setForm({ ...form, active: e.target.checked })}
-                className="rounded text-indigo-600" /> Actif
+                className="rounded text-amber-700" /> Actif
             </label>
             <p className="text-xs text-gray-500">Les prix reviennent automatiquement à la normale hors période — aucune action requise.</p>
-            <button type="submit" disabled={saving} className="w-full bg-indigo-600 text-white py-3 rounded-xl font-bold hover:bg-indigo-700 disabled:opacity-50">
+            <button type="submit" disabled={saving} className="w-full bg-amber-700 text-white py-3 rounded-xl font-bold hover:bg-amber-800 disabled:opacity-50">
               {saving ? 'Sauvegarde...' : 'Sauvegarder'}
             </button>
           </form>

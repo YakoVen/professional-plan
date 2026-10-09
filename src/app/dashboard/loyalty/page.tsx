@@ -44,14 +44,14 @@ export default function LoyaltyConfigPage() {
       <div className="flex justify-between items-center">
         <h1 className="text-2xl font-bold flex items-center gap-2"><Award className="text-amber-500" /> Programme fidélité</h1>
         <button onClick={handleSave} disabled={saving}
-          className="flex items-center gap-2 bg-indigo-600 text-white px-4 py-2 rounded-xl hover:bg-indigo-700 disabled:opacity-50">
+          className="flex items-center gap-2 bg-amber-700 text-white px-4 py-2 rounded-xl hover:bg-amber-800 disabled:opacity-50">
           <Save size={16} /> {saving ? 'Sauvegarde...' : 'Sauvegarder'}
         </button>
       </div>
 
       <label className="flex items-center gap-2 text-sm font-medium">
         <input type="checkbox" checked={cfg.active} onChange={(e) => setCfg({ ...cfg, active: e.target.checked })}
-          className="rounded text-indigo-600" /> Programme actif
+          className="rounded text-amber-700" /> Programme actif
       </label>
 
       <div className="bg-white rounded-xl border p-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
